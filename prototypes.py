@@ -6,6 +6,7 @@ dotenv.load_dotenv()
 
 from django.conf import settings
 
+BASE_DIR = os.path.dirname(__file__)
 
 settings.configure(
     DEBUG=os.environ.get("DEBUG"),
@@ -17,6 +18,14 @@ settings.configure(
         'sitebuilder',
     ),
     STATIC_URL='/static/',
+    SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR,'pages'),
+    TEMPLATES=[
+        {
+            'BACKEND':'django.template.backends.django.DjangoTemplates',
+            'DIRS':['templates'],
+            'APP_DIRS':True,
+        }
+    ],
 )
 
 if __name__ == '__main__':
