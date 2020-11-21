@@ -9,3 +9,4 @@ Steps to run a project:
 1. Create virtual environment in project directory
 1. Activate virtual environment (when activated name of the venv is shown in brackets in terminal before path). 
 1. Type path to project directory and install all needed pip packages by typing in terminal 'pip install -r requirements.txt'.
+1. Create file named ".env" and put in it variable for DEBUG and SECRET_KEY i.e. DEBUG=True, SECRET_KEY=put_here_generated_secret_key
